@@ -1,0 +1,37 @@
+{
+  "name": "typescript-and-power-assert-sample",
+  "version": "1.0.0",
+  "author": {
+    "name": "Masayuki IZUMI",
+    "email": "masayuki@izumin.info",
+    "url": "https://github.com/izumin5210"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.38",
+    "@types/node": "^7.0.4",
+    "@types/power-assert": "^1.4.29",
+    "espower-typescript": "^7.0.0",
+    "mocha": "^3.2.0",
+    "power-assert": "^1.4.2",
+    "tslint": "^4.4.2",
+    "tslint-config-standard": "^3.0.0",
+    "typescript": "^2.1.5"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "http://izumin.mit-license.org/2015"
+  },
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izumin5210/tomatone.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm lib/**/*.js lib/**/*.js.map",
+    "lint": "tslint {lib,test}/**/*.ts --exclude lib/**/*.d.ts",
+    "pretest": "npm run lint",
+    "test": "mocha --compilers ts:espower-typescript/guess test/**/*-spec.ts"
+  }
+}
